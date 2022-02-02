@@ -12,6 +12,7 @@ import java.util.Scanner;
  *
  *
  * @author sivagamasrinivasan
+ * @author Sukhmanpreet Kaur
  */
 public class Card {
 
