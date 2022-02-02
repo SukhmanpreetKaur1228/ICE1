@@ -21,8 +21,9 @@ public class CardTrickICE1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Card lucyCard = new Card();
         Scanner scnr = new Scanner(System.in);
-        Card[] magicHand = new Card[7]; 
+        Card[] magicHand = new Card[7];
         for (int i = 0; i < magicHand.length; i++) {
             Card c1 = new Card();
             c1.setValue((int) (1 + Math.random() * 14));
@@ -50,8 +51,7 @@ public class CardTrickICE1 {
         }
         Card uCard = new Card();
         try {
-Card.askForNumber(uCard);
-
+            Card.askForNumber(uCard);
 
         } catch (NumberFormatException e) {
             System.out.println("Please enter an integer.");

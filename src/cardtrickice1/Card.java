@@ -58,14 +58,18 @@ public class Card {
     static String chooseRandomSuits() {
         return Card.SUITS[(int) (Math.random() * 4)];
     }
-
+/**
+ * @param uCard
+ * 
+ */
     public static void askForNumber(Card uCard) {
         System.out.println("Enter card number of your choice");
         String b = scnr.nextLine();
         methodForSuits(uCard, b);
     }
 /**
- * @param userCard, cardNumber(b)
+ * @param uCard
+ * @param b
  * 
  */
     public static void methodForSuits(Card uCard, String b) {
