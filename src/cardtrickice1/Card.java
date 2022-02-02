@@ -5,17 +5,25 @@
  */
 package cardtrickice1;
 
-/** define card value and suits
- * 
+import java.util.Scanner;
+
+/**
+ * define card value and suits
+ *
  *
  * @author sivagamasrinivasan
  */
-public class Card 
-{
+public class Card {
+
+    static Scanner scnr = new Scanner(System.in);
+
+    static String chooseRandomSuits() {
+        return Card.SUITS[(int) (Math.random() * 4)];
+    }
     private int value;
     private String suits; //encapsulation
     //constant
-    public static final String [] SUITS = { "diamonds","clubs","spades","hearts"};
+    public static final String[] SUITS = {"diamonds", "clubs", "spades", "hearts"};
 
     /**
      * @return the value
@@ -44,8 +52,33 @@ public class Card
     public void setSuits(String suits) {
         this.suits = suits;
     }
-   //number
-    
-    //method for suits
-    
+
+    //number
+    public static void askForNumber(Card uCard) {
+        System.out.println("Enter card number of your choice");
+        String b = scnr.nextLine();
+        methodForSuits(uCard, b);
+    }
+
+    public static void methodForSuits(Card uCard, String b) {
+        try {
+            uCard.setValue(Integer.parseInt(b));
+        } catch (NumberFormatException ex) {
+            switch (b) {
+                case "Jack":
+                    uCard.setValue(11);
+                    break;
+                case "Queen":
+                    uCard.setValue(12);
+                    break;
+                case "King":
+                    uCard.setValue(13);
+                    break;
+                default:
+                    System.out.println("please enter a valid card number or face");
+                    askForNumber(uCard);
+                    break;
+            }
+        }
+    }
 }
