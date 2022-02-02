@@ -64,7 +64,7 @@ public class Card {
         methodForSuits(uCard, b);
     }
 /**
- * @parag userCard, cardNumber(b)
+ * @param userCard, cardNumber(b)
  * 
  */
     public static void methodForSuits(Card uCard, String b) {
