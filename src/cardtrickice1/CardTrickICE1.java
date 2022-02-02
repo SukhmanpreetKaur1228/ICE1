@@ -21,29 +21,28 @@ public class CardTrickICE1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Card lucyCard = new Card();
         Scanner scnr = new Scanner(System.in);
         Card[] magicHand = new Card[7];
         for (int i = 0; i < magicHand.length; i++) {
             Card c1 = new Card();
             c1.setValue((int) (1 + Math.random() * 14));
-            String face = Integer.toString(c1.getValue());
-            switch (c1.getValue()) {
-                case 1:
-                    face = "Ace";
-                    break;
-                case 11:
-                    face = "Jack";
-                    break;
-                case 12:
-                    face = "Queen";
-                    break;
-                case 13:
-                    face = "King";
-                    break;
-                default:
-                    break;
-            }
+//            String face = Integer.toString(c1.getValue());
+//            switch (c1.getValue()) {
+//                case 1:
+//                    face = "Ace";
+//                    break;
+//                case 11:
+//                    face = "Jack";
+//                    break;
+//                case 12:
+//                    face = "Queen";
+//                    break;
+//                case 13:
+//                    face = "King";
+//                    break;
+//                default:
+//                    break;
+//            }
 
             c1.setSuits(Card.chooseRandomSuits());
             magicHand[i] = c1;
