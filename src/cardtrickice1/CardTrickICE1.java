@@ -21,6 +21,7 @@ public class CardTrickICE1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+      
         Scanner scnr = new Scanner(System.in);
         Card[] magicHand = new Card[7];
         for (int i = 0; i < magicHand.length; i++) {
