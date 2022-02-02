@@ -17,9 +17,6 @@ public class Card {
 
     static Scanner scnr = new Scanner(System.in);
 
-    static String chooseRandomSuits() {
-        return Card.SUITS[(int) (Math.random() * 4)];
-    }
     private int value;
     private String suits; //encapsulation
     //constant
@@ -53,13 +50,23 @@ public class Card {
         this.suits = suits;
     }
 
-    //number
+    /**
+     * @return suit
+     */
+
+    static String chooseRandomSuits() {
+        return Card.SUITS[(int) (Math.random() * 4)];
+    }
+
     public static void askForNumber(Card uCard) {
         System.out.println("Enter card number of your choice");
         String b = scnr.nextLine();
         methodForSuits(uCard, b);
     }
-
+/**
+ * @parag userCard, cardNumber(b)
+ * 
+ */
     public static void methodForSuits(Card uCard, String b) {
         try {
             uCard.setValue(Integer.parseInt(b));

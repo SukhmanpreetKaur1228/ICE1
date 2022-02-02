@@ -22,11 +22,10 @@ public class CardTrickICE1 {
      */
     public static void main(String[] args) {
         Scanner scnr = new Scanner(System.in);
-        Card[] magicHand = new Card[7]; //Array of object
+        Card[] magicHand = new Card[7]; 
         for (int i = 0; i < magicHand.length; i++) {
             Card c1 = new Card();
-            c1.setValue((int) (1 + Math.random() * 14));//use a method to generate random *13
-//            int a = (int) (Math.random() * 4);
+            c1.setValue((int) (1 + Math.random() * 14));
             String face = Integer.toString(c1.getValue());
             switch (c1.getValue()) {
                 case 1:
@@ -44,32 +43,15 @@ public class CardTrickICE1 {
                 default:
                     break;
             }
-//            switch (a) {
-//                case 0:
-//                    c1.setSuits("hearts");//random method suit 
-//                    break;
-//                case 1:
-//                    c1.setSuits("spades");//random method suit 
-//                    break;
-//                case 2:
-//                    c1.setSuits("clubs");//random method suit 
-//                    break;
-//                default:
-//                    c1.setSuits("daimond");//random method suit 
-//                    break;
-//            }
-//            
-//            System.out.println(face+" of "+c1.getSuits());
+
             c1.setSuits(Card.chooseRandomSuits());
             magicHand[i] = c1;
-            System.out.println(face + " of " + magicHand[i].getSuits());
+//            System.out.println(face + " of " + magicHand[i].getSuits());
         }
         Card uCard = new Card();
         try {
 Card.askForNumber(uCard);
-//            System.out.println("Enter card number of your choice");
-//            String b = scnr.nextLine();
-//            Card.methodForSuits(uCard, b);
+
 
         } catch (NumberFormatException e) {
             System.out.println("Please enter an integer.");
